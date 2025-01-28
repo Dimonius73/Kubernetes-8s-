@@ -44,21 +44,38 @@ kind: Deployment
 metadata:
 
   name: netology-ml
+
 spec:
+
   replicas: 2
+  
   selector:
+  
     matchLabels:
+    
       app: tomcat
+  
   strategy:
+  
     type: RollingUpdate
+  
   template:
+  
     metadata:
+    
       labels:
+      
         app: tomcat
+    
     spec:
+    
       containers:
+      
       - name: tomcat
+      
         image: tomcat:8.5.69
+        
         ports:
+        
         - containerPort: 8080
 
