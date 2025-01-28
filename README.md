@@ -36,9 +36,13 @@ Kubernetes (k8s) — это система управления контейне
 
 Kubernetes-манифест
 Следующий манифест создаст Deployment для сервера приложений Tomcat версии 8.5.69 с двумя репликами и стратегией RollingUpdate.
+
 apiVersion: apps/v1
+
 kind: Deployment
+
 metadata:
+
   name: netology-ml
 spec:
   replicas: 2
